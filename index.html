@@ -1,0 +1,50 @@
+<!DOCTYPE html>        <!-- self-contained 태그라서 혼자 스스로 열고 닫는 태그다. 왜냐하면 이 태그는 그 자체로 정보를 제공하기 때문이다. 이 택가 마킹을 하거나 명칭하는 내용은 없다. 그 자체 정보가 있을 뿐이다.-->
+<html> 
+    <head>       <!--head는 유저에게 보이지 않는다. 브라우저에게 나의 웹사잍에 관한 필요한 정보를 제공한다.-->
+        <meta charset="UTF-8 ">  <!-- Character encoding(셋팅이 잘못되면 ???로 출력된다.) -->   <!-- meta의 뜻은 추가 정보같은 것이다.-->
+        <meta name="author" content="MJ's Frist HTML CODE"> <!-- meta태그는 정말 많은 종류가 있다.-->
+        <meta name="description" content="Welcome to my Kakao Clone">   <!-- 이 내용은 어떤 내용을 검색했을 때 밑에 간략하게 나오는 설명글이다.-->
+        <title>This is my tittle</title>
+    </head>
+
+    <body>  <!-- 사람이 읽는 컨텐츠는 body에 있다.-->
+        
+
+        <h1>This is my big title</h1>   <!-- 큰 제목을 쓰고 싶을 때 이 태그 사용-->
+        <section>This is an important section</section>
+
+        <div>What the hell</div>
+        <span>something else</span>
+        <h6>This is my small title</h6>
+
+
+        <section>
+            <header id="headerNumberOne" class="Korean">    <!-- 고유한 element를 사용할 때 id를 적용한다.(ex.주민등록번호같은 개념)
+                                                                계속 반복되는 element의 경우엔 class 사용(ex.한국인)
+                                                                -->
+                <h1>Title of a section</h1>
+            </header>
+        </section>
+
+        <div>
+            <header id="differentHeader" class="Korean"> Title of the div container
+            </header>
+        </div>
+
+
+    </body>
+
+
+
+
+</html>
+
+
+<!-- semantic(제목, 문단, 내비게이션), section, article, header은 의미가 있는 태그 non-semantic은 의미가 없는 태그
+    예를 들어 h1은 의미가 있음 div,span는 의미가 없음
+    주로 header와 같은 태그를 사용한다.  
+    div는 컨테이너, 박스와 같은 태그로 그안에 내용물을 넣기 위해 사용된다.
+    div를 마구 사용하면 혼동이 올 수 있으므로 각 div가 무엇을 뜻하는지를 알려줄 필요가 있다.
+    span은 텍스트를 위한 컨테이너다. 그냥 텍스트를 위한 컨테이너가 필요할 때 사용한다.
+    https://www.w3schools.com/html/html5_semantic_elements.asp <-semantic에 대한 자세한 설명
+    -->

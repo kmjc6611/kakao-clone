@@ -1,58 +1,105 @@
 <!DOCTYPE html>
-<!-- self-contained 태그라서 혼자 스스로 열고 닫는 태그다. 왜냐하면 이 태그는 그 자체로 정보를 제공하기 때문이다. 이 택가 마킹을 하거나 명칭하는 내용은 없다. 그 자체 정보가 있을 뿐이다.-->
-<html>
+<html lang="en">
 
 <head>
-    <!--head는 유저에게 보이지 않는다. 브라우저에게 나의 웹사잍에 관한 필요한 정보를 제공한다.-->
-    <meta charset="UTF-8 "> <!-- Character encoding(셋팅이 잘못되면 ???로 출력된다.) -->
-    <!-- meta의 뜻은 추가 정보같은 것이다.-->
-    <meta name="author" content="MJ's Frist HTML CODE"> <!-- meta태그는 정말 많은 종류가 있다.-->
-    <meta name="description" content="Welcome to my Kakao Clone"> <!-- 이 내용은 어떤 내용을 검색했을 때 밑에 간략하게 나오는 설명글이다.-->
-    <title>This is my tittle</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <title>Chats | Kakao Clone</title>
 </head>
 
 <body>
-    <!-- 사람이 읽는 컨텐츠는 body에 있다.-->
-
-
-    <h1>This is my big title</h1> <!-- 큰 제목을 쓰고 싶을 때 이 태그 사용-->
-    <section>This is an important section</section>
-
-    <div>What the hell</div>
-    <span>something else</span>
-    <h6>This is my small title</h6>
-
-
-    <section>
-        <header id="headerNumberOne" class="Korean">
-            <!-- 고유한 element를 사용할 때 id를 적용한다.(ex.주민등록번호같은 개념)
-                                                                계속 반복되는 element의 경우엔 class 사용(ex.한국인)
-                                                                -->
-            <h1>Title of a section</h1>
-        </header>
-    </section>
-
-    <div>
-        <header id="differentHeader" class="Korean"> Title of the div container
-        </header>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <!-- 첫번째 column은 핸드폰 상단좌측 부분-->
+            <!-- status-bar는 부모, column은 자식(__으로 element를 구분함!)-->
+            <span class="status-bar__clock">13:54 </span> <!-- CSS에서 이 코드를 볼 때, 시계가 Status Bar 안에 있다는 것을 볼 수 있다.-->
+        </div>
+        <div class="status-bar__column">
+            <!-- 두번째 column은 핸드폰 상단우측-->
+            <i class="fas fa-clock"></i>
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-wifi"></i>
+            <span class="status-bar__battery-level">100%</span> <!-- 단어를 나누기 위해서 -를 사용함!(__는 부모 자식을 나누기 위해 씀!)-->
+            <i class="fas fa-battery-full"></i>
+        </div>
     </div>
 
-    <a href="#">Fake link</a>
+
+    <header class="header">
+        <div class="header__header-column">
+            <h1 class="header__title">Chats</h1>
+        </div>
+        <div class="header__header-column">
+            <!-- 3개의 아이콘들을 하나의 박스에 넣기 위해 사용-->
+            <span class="header__icon">
+                <i class="fas fa-search"></i>
+            </span>
+            <span class="header__icon">
+                <i class="far fa-comment"></i>
+            </span>
+            <span class="header__icon">
+                <i class="fas fa-cog"></i>
+            </span>
+        </div>
+    </header>
 
 
+
+
+    <main class="chats">
+        <ul class="chats__list">
+            <li class="chats__chat chat">
+                <a href="chat.html">
+                    <div class="chat__column">
+                        <!-- component가 많은 걸 포함해야 하는 경우에 새로운 naming을 만들어준다. -->
+                        <img class="chat__avatar g-avatar" src="images/avatar.jpg" />
+                        <div class="chat__content">
+                            <span class="chat__username">
+                                Lynn
+                            </span>
+                            <span class="chat__preview">뭐해용!</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="chat__column">
+                    <span class="chat__timestamp">어제</span>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+
+
+    <nav class="nav">
+        <!-- 하단의 버튼들-->
+        <ul class="nav__list">
+            <!-- list이기 때문에 ul로 한다.-->
+            <!-- li.nav__list-item*4>a.nav__list-link 하면 4개의 li와 4개의 a가 생성된다.-->
+
+            <li class="nav__list-item">
+                <a href="friends.html" class="nav__list-link">
+                    <i class="far fa-user"></i></a>
+            </li>
+            <li class="nav__list-item">
+                <a href="index.html" class="nav__list-link">
+                    <i class="fas fa-comment"></i>
+                </a>
+            </li>
+            <li class="nav__list-item">
+                <a href="find.html" class="nav__list-link">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+            <li class="nav__list-item">
+                <a href="more.html" class="nav__list-link">
+                    <i class="fas fa-ellipsis-h"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </body>
 
-
-
-
 </html>
-
-
-<!-- semantic(제목, 문단, 내비게이션), section, article, header은 의미가 있는 태그 non-semantic은 의미가 없는 태그
-    예를 들어 h1은 의미가 있음 div,span는 의미가 없음
-    주로 header와 같은 태그를 사용한다.  
-    div는 컨테이너, 박스와 같은 태그로 그안에 내용물을 넣기 위해 사용된다.
-    div를 마구 사용하면 혼동이 올 수 있으므로 각 div가 무엇을 뜻하는지를 알려줄 필요가 있다.
-    span은 텍스트를 위한 컨테이너다. 그냥 텍스트를 위한 컨테이너가 필요할 때 사용한다.
-    https://www.w3schools.com/html/html5_semantic_elements.asp <-semantic에 대한 자세한 설명
-    -->

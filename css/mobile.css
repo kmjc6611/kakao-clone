@@ -4,12 +4,14 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #fce006;
+    background-image: url("../images/nope.jpg");
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    color: white;
+    color: black;
     font-size: 28px;
     text-align: center;
     line-height: 1.5;
@@ -18,7 +20,7 @@
     z-index: 4;
   }
   
-  @media screen and (min-width: 550px) {
+  @media screen and (min-width: 600px) {
     .bigScreen {
       display: flex;
     }
